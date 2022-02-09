@@ -1,0 +1,36 @@
+.sidebarChat {
+  display: flex;
+  padding: 1.2vw;
+
+  cursor: pointer;
+  /* border-bottom: 1px solid #f6f6f6; */
+  border-bottom: 2px solid rgb(32, 44, 51);
+}
+
+a {
+  text-decoration: none;
+}
+
+.sidebarChat:hover {
+  /* background-color: #ebebeb; */
+  background-color: rgb(100, 100, 100);
+}
+
+.sidebarChat__info {
+  margin-left: 1vw;
+}
+
+.sidebarChat__info > h3 {
+  text-decoration: "none";
+  font-weight: 500;
+  font-size: 1.3em;
+  color: white;
+}
+
+.sidebarChat__info > p {
+  color: gray;
+}
+
+.darksidebarChat__info > h3 {
+  color: black;
+}

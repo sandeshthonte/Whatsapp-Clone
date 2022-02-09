@@ -1,0 +1,112 @@
+.chat {
+  flex: 0.65;
+  /* background-color: white; */
+  background-color: rgb(32 , 44, 51);
+  /* 32 44 51 */
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.35em;
+}
+
+.chat__header {
+  padding: 0.8em;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 8px 6px -6px rgba(109, 107, 107, 0.533);
+}
+
+.chat__headerInfo {
+  flex: 1;
+  padding-left: 1.2vw;
+}
+
+.chat__headerInfo > h3 {
+  font-weight: 500;
+  font-size: 1.3em;
+  color: white;
+}
+
+.chat__headerInfo > p {
+  color: gray;
+}
+
+.chat__headerRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100px;
+}
+
+.chat__body {
+  flex: 1;
+  /* background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png"); */
+  background-image: url("./images/chat.jpg");
+  background-size: contain;
+  color: black;
+  background-repeat: repeat;
+  /* background-position: center; */
+  padding: 30px;
+  overflow: scroll;
+}
+
+.chat__receiver {
+  margin-left: auto;
+  background-color: #dcf8c6;
+}
+
+.chat__message {
+  position: relative;
+  font-size: 16px;
+  padding: 6px;
+  border-radius: 5px;
+  width: fit-content;
+  background-color: #ffffff;
+  /* background-color: rgb(32 , 44, 51);  */
+  margin-bottom: 30px;
+}
+
+.chat__receiver {
+  background-color: #dcf8c6;
+}
+
+.chat__name {
+  position: absolute;
+  top: -16px;
+  font-size: x-small;
+  font-weight: 800;
+}
+
+.chat__footer {
+  display: flex;
+  bottom: 0.5em;
+  justify-content: space-between;
+  align-items: center;
+  height: 42px;
+  background-color: #ededed;
+  background-color: rgb(11, 27, 36);
+  padding: 0.5em;
+}
+
+.chat__footer > form {
+  flex: 1;
+  display: flex;
+}
+
+.chat__footer > form > input {
+  flex: 1;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: rgb(32 , 44, 51);
+}
+
+.chat__timestamp {
+  top: 0px;
+  font-size: x-small;
+  margin-left: 10px;
+}
+
+.chat__footer > form > button {
+  display: none;
+}

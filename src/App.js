@@ -1,23 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { db, auth, provider } from "./firebase";
+import "./App.css";
+import Sidebar from "./Sidebar";
+import Chat from "./Chat";
+import Login from "./Login";
 
 function App() {
+  const [user, setUsers] = useState(JSON.parse(localStorage.getItem("user")));
+  const [theme, setTheme] = useState(false);
+  // localStorage.setItem("theme", JSON.stringify(theme));
+  const signOut = () => {
+    auth.signOut().then(() => {
+      localStorage.removeItem("user");
+      setUsers(null);
+    });
+  };
+
+  useEffect(() => {
+    console.log(theme);
+  }, [theme]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {!user ? (
+        <Login setUsers={setUsers} />
+      ) : (
+        <div className={theme ? "app__body" : "app__body dark"}>
+          <Router>
+            <Sidebar
+              signOut={signOut}
+              user={user}
+              theme={theme}
+              setTheme={setTheme}
+            />
+            <Switch>
+              <Route path="/rooms/:roomId">
+                <Chat />
+              </Route>
+              <Route path="/" component={null} />
+            </Switch>
+          </Router>
+        </div>
+      )}
     </div>
   );
 }
