@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import { db, auth, provider } from "./firebase";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { auth } from "./firebase";
 import "./App.css";
 import Sidebar from "./Sidebar";
 import Chat from "./Chat";
@@ -18,7 +18,7 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(theme);
+    // console.log(theme);
   }, [theme]);
 
   return (

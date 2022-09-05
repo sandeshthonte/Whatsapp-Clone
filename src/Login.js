@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { auth, provider } from "./firebase";
-import whatsapp from "./images/WhatsApp.png";
+import whatsapp from "./images/lake.png";
 
 function Login(props) {
   const setUsers = props.setUsers;
@@ -27,7 +27,7 @@ function Login(props) {
     <Container>
       <Content>
         <SlackImg src={whatsapp} alt="whatsapp" />
-        <h1>Sign in Whatsapp</h1>
+        <h1>Signup The Lake House</h1>
         <SignInButton onClick={() => signIn()}>
           Sign In With Google
         </SignInButton>

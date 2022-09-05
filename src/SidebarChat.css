@@ -13,7 +13,13 @@ a {
 
 .sidebarChat:hover {
   /* background-color: #ebebeb; */
-  background-color: rgb(100, 100, 100);
+  background-color: rgb(32, 44, 51);
+}
+
+.sidebarChat > .MuiSvgIcon-root {
+  color: #eded;
+  /* border-bottom: 1px solid #eded; */
+  padding: 10px;
 }
 
 .sidebarChat__info {
@@ -24,7 +30,7 @@ a {
   text-decoration: "none";
   font-weight: 500;
   font-size: 1.3em;
-  color: white;
+  color: #eded;
 }
 
 .sidebarChat__info > p {

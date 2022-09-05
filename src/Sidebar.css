@@ -50,13 +50,12 @@
 }
 
 .sidebar__searchContainer > input {
-  caret-color: white;
+  caret-color: #eded;
   background-color: rgb(32, 44, 51);
   /* border-bottom: 2px solid rgb(32, 44, 51); */
 }
 
 .sidebar__searchContainer > .MuiSvgIcon-root {
-  color: gray;
   padding: 10px;
 }
 
